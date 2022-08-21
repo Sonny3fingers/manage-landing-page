@@ -7,6 +7,7 @@ const sliderWrapper = document.querySelector(".sliderWrapper");
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 let slideIndex = 0;
+let index;
 let screenWidth = window.innerWidth;
 let size = slides[1].clientWidth;
 let counter = 1;
@@ -54,6 +55,7 @@ if (screenWidth < 766) {
   sliderIntervalMobile = setInterval(() => {
     if (slideIndex <= 3) {
       showSlide(slideIndex);
+      index = slideIndex;
       dots.forEach((dot) => {
         dot.classList.remove("filled");
       });
@@ -87,6 +89,7 @@ if (screenWidth < 766) {
 for (let dot of dots) {
   dot.addEventListener("click", () => {
     index = dot.getAttribute("data-index");
+    slideIndex = index;
     dots.forEach((dot) => {
       dot.classList.remove("filled");
     });

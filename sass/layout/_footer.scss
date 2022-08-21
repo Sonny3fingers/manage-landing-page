@@ -34,8 +34,8 @@ footer {
     gap: 1rem;
   }
   input {
-    flex: 4;
-    flex-shrink: 2;
+    flex: 2;
+    min-width: 180px;
     padding: 0.7rem 1.4rem;
     border-radius: 2rem;
     font-size: 0.8rem;
