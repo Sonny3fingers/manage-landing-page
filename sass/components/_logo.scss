@@ -1,0 +1,22 @@
+.logo {
+  width: 6.9rem;
+  height: auto;
+  @include breakpoint-up(desktops) {
+    width: 9.7rem;
+    height: auto;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  &--footer {
+    width: 9.7rem;
+    align-self: center;
+    margin-bottom: 2.7rem;
+    @include breakpoint-up(tablets) {
+      order: 1;
+      margin-bottom: 0;
+      align-self: flex-start;
+    }
+  }
+}

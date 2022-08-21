@@ -1,0 +1,53 @@
+.cta-section {
+  width: 100%;
+  max-width: 1700px;
+  background-color: $brightRed;
+  background-image: url("../../images/bg-tablet-pattern-opacity.svg"),
+    url("../../images/bg-tablet-pattern-opacity.svg");
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  background-position: left -80% top 50%, right -100% bottom -50%;
+  background-size: 60%;
+  @include breakpoint-up(desktops) {
+    background-position: left top, 160% 110%;
+    background-size: auto, auto;
+  }
+  color: $veryLightGray;
+  flex-direction: column;
+  justify-content: center;
+  @include breakpoint-up(tablets) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cta-text {
+    margin-bottom: 2rem;
+    @include breakpoint-up(tablets) {
+      margin-bottom: 0;
+      flex-basis: 30rem;
+    }
+  }
+  h2 {
+    font-family: $poppinsFontFamily;
+    line-height: 2.8rem;
+    font-size: 2.4rem;
+    text-align: center;
+    @include breakpoint-up(tablets) {
+      text-align: left;
+    }
+  }
+  .cta-button {
+    margin: auto;
+    @include breakpoint-up(tablets) {
+      margin: 0;
+    }
+  }
+  button {
+    background-color: $veryLightGray;
+    color: $brightRed;
+    &:hover {
+      color: hsla(12, 88%, 59%, 0.6);
+      background-color: $veryLightGray;
+    }
+  }
+}

@@ -1,0 +1,184 @@
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+.container {
+  width: 100%;
+  max-width: 1700px;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  &--pall {
+    padding: 2.7rem 1.5rem;
+    @include breakpoint-up(mobileSmall) {
+      padding: 3.1rem 2rem;
+    }
+    @include breakpoint-up(tablets) {
+      padding: 3.5rem 7.7rem;
+    }
+    @include breakpoint-up(desktops) {
+      padding: 5rem 11rem;
+    }
+  }
+  &--pall-y-extra {
+    padding: 6.25rem 1.5rem 5.625rem 1.5rem;
+    @include breakpoint-up(smartPhones) {
+      padding: 6.25 2.5rem 5.625rem 2.5rem;
+    }
+    @include breakpoint-up(tablets) {
+      padding: 4.75rem 11rem;
+    }
+  }
+  &--p-topX {
+    padding: 2.7rem 1.5rem 0;
+    @include breakpoint-up(tablets) {
+      padding: 3.5rem 7.7rem 0;
+    }
+    @include breakpoint-up(desktops) {
+      padding: 5rem 11rem 0;
+    }
+  }
+  &--p-b {
+    padding-bottom: 2.7rem;
+  }
+  &--p-bottomX {
+    padding: 0 1.5rem 2.7rem;
+    @include breakpoint-up(desktops) {
+      padding: 0 5rem 5rem 11rem;
+    }
+  }
+  &--p-extraX {
+    padding: 0 1rem;
+    @include breakpoint-up(desktops) {
+      padding: 0;
+    }
+  }
+  &--p-r-small {
+    padding-right: 1.5rem;
+    @include breakpoint-up(desktops) {
+      padding-right: 0;
+    }
+  }
+  &--p-right {
+    @include breakpoint-up(smartPhones) {
+      padding-right: 7%;
+    }
+    @include breakpoint-up(tablets) {
+      padding-right: unset;
+    }
+    @include breakpoint-up(desktops) {
+      padding-right: 5%;
+    }
+  }
+  &--py {
+    padding: 2.7rem 0;
+    @include breakpoint-up(tablets) {
+      padding: 3.5rem 0;
+    }
+    @include breakpoint-up(desktops) {
+      padding: 5rem 0;
+    }
+  }
+  &--px {
+    padding: 0 1.5rem;
+    @include breakpoint-up(mobileSmall) {
+      padding: 0 2rem;
+    }
+    @include breakpoint-up(tablets) {
+      padding: 0 7.7rem;
+    }
+    @include breakpoint-up(desktops) {
+      padding: 0 11rem;
+    }
+  }
+  &--px-tablets-none {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    @include breakpoint-up(smartPhones) {
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
+  }
+  &--p-bottom-el {
+    padding-bottom: 5px;
+  }
+  &--p-footer {
+    padding: 3rem 1.5rem 1.5rem;
+    @include breakpoint-up(tablets) {
+      padding: 3.5rem 7.7rem;
+    }
+    @include breakpoint-up(desktops) {
+      padding: 3.5rem 11rem;
+    }
+  }
+  &--margin-b {
+    margin-bottom: 2rem;
+  }
+  &--margin-auto {
+    margin: auto;
+  }
+  &--margin-unset {
+    @include breakpoint-up(smartPhones) {
+      margin: unset;
+    }
+  }
+  &--paddingBottomHeader {
+    padding-bottom: 0.75rem;
+    @include breakpoint-up(desktops) {
+      padding-bottom: 1.6rem;
+    }
+  }
+  &--m-left {
+    margin-left: 1rem;
+    @include breakpoint-up(smartPhones) {
+      margin-left: 0;
+    }
+  }
+  &--m-b-small {
+    margin-bottom: 0.75rem;
+  }
+}
+.flex {
+  display: flex;
+  &--direction-column {
+    flex-direction: column;
+  }
+  &--jc-c {
+    justify-content: center;
+  }
+  &--jc-sb {
+    justify-content: space-between;
+  }
+  &--ai-c {
+    align-items: center;
+  }
+}
+.hide-for-mobile {
+  @include breakpoint-down(smartPhones) {
+    display: none;
+  }
+}
+.hide-for-tablets {
+  @include breakpoint-up(smartPhones) {
+    display: none;
+  }
+}
+.hide-for-desktops {
+  @include breakpoint-up(tablets) {
+    display: none;
+  }
+}
+.hide-for-smartPhones {
+  @include breakpoint-down(tablets) {
+    display: none;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}

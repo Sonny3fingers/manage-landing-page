@@ -1,0 +1,111 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: transparent;
+  @include breakpoint-up(smartPhones) {
+    flex-direction: row;
+  }
+}
+.featuresMain {
+  font-family: $poppinsFontFamily;
+  background-color: transparent;
+  @include breakpoint-up(smartPhones) {
+    text-align: left;
+    width: 50%;
+  }
+  h2 {
+    font-weight: bold;
+    line-height: 2.8rem;
+    font-size: 1.8rem;
+    color: $darkBlue;
+    @include breakpoint-up(tablets) {
+      font-size: 2.6rem;
+      font-weight: 500;
+      line-height: 3rem;
+    }
+  }
+  p {
+    line-height: 1.8rem;
+    font-weight: 500;
+    text-align: left;
+    @include breakpoint-up(desktops) {
+      font-size: 1rem;
+      max-width: 85%;
+    }
+  }
+  div {
+    &:last-child {
+      font-weight: 700;
+      color: $darkGrayishBlue;
+    }
+  }
+}
+.featuresList {
+  @include breakpoint-up(smartPhones) {
+    width: 50%;
+  }
+  @include breakpoint-up(desktops) {
+    padding-right: 12.5%;
+  }
+  ol {
+    list-style-type: none;
+  }
+  li {
+    width: 100%;
+    @include breakpoint-up(smartPhones) {
+      div {
+        &:last-of-type {
+          margin-left: 6.3rem;
+          max-width: 82%;
+        }
+      }
+    }
+    div {
+      &:first-of-type {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $veryPaleRed;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        @include breakpoint-up(smartPhones) {
+          background-color: unset;
+        }
+      }
+    }
+  }
+  span {
+    background-color: $brightRed;
+    color: $veryLightGray;
+    font-size: 1.1rem;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 0.6rem 1.5rem;
+    border-radius: 1rem;
+    @include breakpoint-up(smartPhones) {
+      margin-right: 4%;
+      padding: 0.75rem 1.75rem;
+    }
+  }
+  h3 {
+    flex: 1;
+    font-family: $poppinsFontFamily;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $darkBlue;
+    padding: 0.5rem;
+    text-align: left;
+  }
+  p {
+    line-height: 1.7rem;
+    font-family: $poppinsFontFamily;
+    color: $darkGrayishBlue;
+    font-size: 0.9rem;
+    text-align: left;
+    @include breakpoint-up(desktops) {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+// Body
+@import url("https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@200&family=Be+Vietnam+Pro:wght@400;500;700&family=Lato:wght@300&family=Poppins:wght@200;300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@200&family=Be+Vietnam+Pro:wght@400;500;700&family=Lato:wght@300&family=Poppins:wght@200;300;500;700&display=swap");
+
+body {
+  font-size: 1rem;
+  font-family: $bodyFontFamily;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

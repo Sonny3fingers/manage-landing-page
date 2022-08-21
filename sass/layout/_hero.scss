@@ -1,0 +1,71 @@
+.hero {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  @include breakpoint-up(smartPhones) {
+    flex-direction: row;
+    height: 100%;
+  }
+  .heroImage {
+    width: 100%;
+    @include breakpoint-up(smartPhones) {
+      width: 50%;
+      order: 2;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .heroText {
+    text-align: center;
+    font-family: $poppinsFontFamily;
+    @include breakpoint-up(mobileSmall) {
+      max-width: 480px;
+      margin: auto;
+    }
+    @include breakpoint-up(smartPhones) {
+      width: 50%;
+      order: 1;
+      max-width: unset;
+      margin: unset;
+      text-align: left;
+      align-self: center;
+    }
+    div {
+      &:first-child {
+        font-size: 2.35rem;
+        font-weight: 700;
+        color: $darkBlue;
+        line-height: 3.1rem;
+        letter-spacing: -0.075rem;
+        @include breakpoint-up(mobileSmall) {
+          margin-bottom: 1rem;
+        }
+        @include breakpoint-up(tablets) {
+          font-size: 3.2rem;
+          font-weight: 500;
+          line-height: 4.2rem;
+          letter-spacing: -0.14rem;
+        }
+        @include breakpoint-up(desktops) {
+          font-size: 3.7rem;
+          font-weight: 500;
+          line-height: 4.2rem;
+          letter-spacing: -0.14rem;
+        }
+      }
+      &:nth-last-child(2) {
+        line-height: 1.79rem;
+        color: $darkGrayishBlue;
+        text-align: justify;
+        @include breakpoint-up(mobileSmall) {
+          margin-bottom: 2rem;
+        }
+        @include breakpoint-up(tablets) {
+          max-width: 400px;
+        }
+      }
+    }
+  }
+}

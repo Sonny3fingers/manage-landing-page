@@ -1,0 +1,19 @@
+.heroHeader {
+  width: 100%;
+  min-height: 825px;
+  background-image: url("../../images/bg-tablet-pattern.svg"),
+    url("../../images/bg-tablet-pattern.svg");
+  background-position: right -120px top -95px, bottom 10px right -180px;
+  background-repeat: no-repeat;
+  background-size: 120%, 82.67%;
+  display: flex;
+  flex-direction: column;
+  @include breakpoint-up(mobileSmall) {
+    background-size: 624px, 430px;
+  }
+  @include breakpoint-up(desktops) {
+    background-position: right -200px top -185px;
+    background-size: 58%;
+    min-height: 890px;
+  }
+}
